@@ -6,7 +6,6 @@
 
 <div class="mx-4 my-6 space-y-8 md:mx-auto md:w-2xl">
 	<Card>
-		<h1>5seg's blog</h1>
 		<div class="px-6 text-start">
 			<div class="mb-2">
 				<h1>{data.title}</h1>
@@ -16,5 +15,8 @@
 				{@html data.content}
 			</div>
 		</div>
+		<hr class="mt-4 mb-2 border border-red-800/50 text-transparent" />
+		<a href="/articles">記事一覧へ戻る ↩️ </a>
+		<hr class="mt-2 mb-4 border border-red-800/50 text-transparent" />
 	</Card>
 </div>
