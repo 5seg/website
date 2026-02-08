@@ -2,7 +2,6 @@
 	import Card from '../../../components/Card.svelte';
 	export let data;
 	const parseDate = (d: Date) => new Date(d).toLocaleString('ja-JP');
-	console.log(new Date(data.publishedAt).getTime());
 </script>
 
 <div class="mx-4 my-6 space-y-8 md:mx-auto md:w-2xl">
