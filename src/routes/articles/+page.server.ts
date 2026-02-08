@@ -28,7 +28,7 @@ export async function load({ fetch, url }): Promise<articleListT> {
 	builtURL.searchParams.append('fields[2]', 'publishedAt');
 	builtURL.searchParams.append('sort', 'publishedAt:desc');
 	builtURL.searchParams.append('pagination[page]', page);
-	builtURL.searchParams.append('pagination[pageSize]', '2');
+	builtURL.searchParams.append('pagination[pageSize]', '25');
 	const res = await fetch(builtURL);
 	if (res.ok) {
 		const data = (await res.json()) as articleListT;
