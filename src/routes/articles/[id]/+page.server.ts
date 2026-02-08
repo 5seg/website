@@ -29,7 +29,6 @@ export async function load({ fetch, params }) {
 			langs: languages,
 			themes: [theme]
 		});
-		console.log(languages);
 		const html = await new Marked()
 			.use(
 				markedShiki({
