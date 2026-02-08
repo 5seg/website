@@ -30,16 +30,22 @@
 		</div>
 	</Card>
 	<Card>
-		<h2 class="mb-4">最近の記事</h2>
+		<h2>ブログ</h2>
+		<p class="mb-4">最近書いた記事</p>
 		{#each data.data as post}
 			<div class="mx-4 my-2">
-				<a href="/#">
-					<div class="rounded-xl border border-red-800 p-4 text-start">
+				<a href="/articles/{post.documentId}">
+					<div
+						class="rounded-xl border border-red-800 p-4 text-start transition-colors hover:border-red-700"
+					>
 						<p class="text-gray-500">{parseDate(post.publishedAt)}</p>
 						<h3>{post.title}</h3>
 					</div>
 				</a>
 			</div>
 		{/each}
+		<a href="/articles" class="text-gray-400 transition-colors hover:text-gray-300"
+			>全記事のリストを見る</a
+		>
 	</Card>
 </div>
