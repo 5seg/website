@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
+@import 'tailwindcss';
+
+@layer base {
+	html {
+		font-family: 'Noto Serif JP', serif;
+		background: #381d24;
+		color: #dfcfd2;
+		text-align: center;
+	}
+	h1 {
+		font-size: var(--text-4xl);
+		font-weight: bold;
+	}
+	h2 {
+		font-size: var(--text-3xl);
+		font-weight: bold;
+	}
+	h3 {
+		font-size: var(--text-2xl);
+		font-weight: bold;
+	}
+}
+
+@layer components {
+	.box-shadow-center {
+		box-shadow:
+			0 0px 4px 2px var(--tw-shadow-color, rgb(0 0 0 / 0.1)),
+			0 0px 8px 0px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+	}
+	.text-shadow-center {
+		text-shadow:
+			var(--tw-text-shadow-color, rgba(0, 0, 0, 0.1)) 0px 0px 2px,
+			var(--tw-text-shadow-color, rgb(0 0 0 / 0.1)) 0px 0px 6px,
+			var(--tw-text-shadow-color, rgb(0 0 0 / 0.1)) 0px 0px 10px;
+	}
+	.bg-5seg-white {
+		background-color: #dfcfd2;
+	}
+	.bg-5seg-dark {
+		background-color: #62373e;
+	}
+}
