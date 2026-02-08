@@ -41,3 +41,10 @@
 		background-color: #62373e;
 	}
 }
+
+.shiki {
+	margin-top: calc(var(--spacing) * 2);
+	margin-bottom: calc(var(--spacing) * 2);
+	border-radius: var(--radius-xl);
+	padding: calc(var(--spacing) * 2);
+}
