@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Card from '../../components/Card.svelte';
 	export let data;
-	const parseDate = (d: Date) => new Date(d).toLocaleDateString('ja-JP');
+	const parseDate = (d: Date) => new Date(d).toLocaleString('ja-JP');
 </script>
 
 <div class="mx-4 my-6 space-y-8 md:mx-auto md:w-lg">
@@ -20,7 +20,7 @@
 					<div
 						class="rounded-xl border border-red-800 p-4 text-start transition-colors hover:border-red-700"
 					>
-						<p class="text-gray-500">{parseDate(post.publishedAt)}</p>
+						<p class="font-mono text-gray-500">{parseDate(post.publishedAt)}</p>
 						<h3>{post.title}</h3>
 					</div>
 				</a>
