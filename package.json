@@ -26,8 +26,8 @@
 		"vite": "^7.3.1"
 	},
 	"dependencies": {
+		"@deno/svelte-adapter": "^0.1.1",
 		"@iconify/svelte": "^5.2.1",
-		"@sveltejs/adapter-auto": "^7.0.0",
 		"marked": "^17.0.1",
 		"marked-shiki": "^1.2.1",
 		"shiki": "^3.22.0"
