@@ -43,5 +43,8 @@
 				{/if}
 			</div>
 		{/if}
+		<hr class="mt-4 mb-2 border border-red-800/50 text-transparent" />
+		<a href="/">戻る ↩️ </a>
+		<hr class="mt-2 mb-4 border border-red-800/50 text-transparent" />
 	</Card>
 </div>
