@@ -4,6 +4,11 @@
 	const parseDate = (d: Date) => new Date(d).toLocaleString('ja-JP');
 </script>
 
+<svelte:head>
+	<title>5seg's blog</title>
+	<meta name="description" content="記事一覧" />
+</svelte:head>
+
 <div class="mx-4 my-6 space-y-8 md:mx-auto md:w-lg">
 	<Card>
 		<h1 class="mb-6 text-white">5seg's blog</h1>
