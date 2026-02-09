@@ -11,7 +11,7 @@
 				<h1>{data.title}</h1>
 				<p class="font-mono text-gray-500">{parseDate(data.publishedAt)}</p>
 			</div>
-			<div class="">
+			<div>
 				{@html data.content}
 			</div>
 		</div>

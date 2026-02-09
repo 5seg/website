@@ -28,6 +28,7 @@
 	"dependencies": {
 		"@deno/svelte-adapter": "^0.1.1",
 		"@iconify/svelte": "^5.2.1",
+		"kiso.css": "^1.2.4",
 		"marked": "^17.0.1",
 		"marked-shiki": "^1.2.1",
 		"shiki": "^3.22.0"

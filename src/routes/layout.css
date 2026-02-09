@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
+@import 'kiso.css';
 @import 'tailwindcss';
 
 @layer base {
 	html {
-		font-family: 'Noto Serif JP', serif;
+		font-family: 'Noto Serif JP', serif !important;
 		background: #381d24;
 		color: #dfcfd2;
 		text-align: center;
@@ -19,6 +20,10 @@
 	h3 {
 		font-size: var(--text-2xl);
 		font-weight: bold;
+	}
+	li {
+		margin-left: calc(var(--spacing) * 4);
+		list-style-type: disc;
 	}
 }
 
