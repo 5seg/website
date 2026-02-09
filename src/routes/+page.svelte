@@ -34,7 +34,7 @@
 		<p class="mb-4">最近書いた記事</p>
 		{#each data.data as post}
 			<div class="mx-4 my-2">
-				<a href="/articles/{post.documentId}">
+				<a href="/articles/{post.documentId}?ref=top">
 					<div
 						class="rounded-xl border border-red-800 p-4 text-start transition-colors hover:border-red-700"
 					>

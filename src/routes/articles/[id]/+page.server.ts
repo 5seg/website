@@ -18,9 +18,10 @@ const extractLang = (str: string) => {
 	return languages;
 };
 
-export async function load({ fetch, params }) {
+export async function load({ fetch, url, params }) {
 	const builtURL = new URL(`${API_ENDPOINT}/articles/${params.id}`);
 	const res = await fetch(builtURL);
+	const fromRoot = url.searchParams.get('ref') === 'top';
 	if (res.ok) {
 		const raw = (await res.json()) as articleT;
 		const languages = extractLang(raw.data.content);
@@ -44,7 +45,8 @@ export async function load({ fetch, params }) {
 		return {
 			title: raw.data.title,
 			content: html,
-			publishedAt: raw.data.publishedAt
+			publishedAt: raw.data.publishedAt,
+			fromRoot
 		};
 	} else {
 		if (res.status === 404) {

@@ -16,7 +16,11 @@
 			</div>
 		</div>
 		<hr class="mt-4 mb-2 border border-red-800/50 text-transparent" />
-		<a href="/articles">記事一覧へ戻る ↩️ </a>
+		{#if data.fromRoot}
+			<a href="/">トップページへ ↩️ </a>
+		{:else}
+			<a href="/articles">記事一覧 ↩️ </a>
+		{/if}
 		<hr class="mt-2 mb-4 border border-red-800/50 text-transparent" />
 	</Card>
 </div>
