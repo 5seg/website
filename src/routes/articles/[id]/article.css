@@ -1,0 +1,17 @@
+.article-main {
+	h2::before {
+		color: #917378;
+		content: '##';
+		margin-right: calc(var(--spacing) * 2);
+	}
+	h3::before {
+		color: #917378;
+		content: '###';
+		margin-right: calc(var(--spacing) * 2);
+	}
+	h4::before {
+		color: #917378;
+		content: '####';
+		margin-right: calc(var(--spacing) * 2);
+	}
+}

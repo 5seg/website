@@ -2,6 +2,7 @@
 	import Card from '../../../components/Card.svelte';
 	export let data;
 	const parseDate = (d: Date) => new Date(d).toLocaleString('ja-JP');
+	import './article.css';
 </script>
 
 <svelte:head>
@@ -16,7 +17,7 @@
 				<h1>{data.title}</h1>
 				<p class="font-mono text-gray-500">{parseDate(data.publishedAt)}</p>
 			</div>
-			<div>
+			<div class="article-main">
 				{@html data.content}
 			</div>
 		</div>
@@ -29,3 +30,6 @@
 		<hr class="mt-2 mb-4 border border-red-800/50 text-transparent" />
 	</Card>
 </div>
+
+<style>
+</style>
