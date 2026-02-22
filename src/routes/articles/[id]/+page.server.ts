@@ -3,8 +3,10 @@ import { API_ENDPOINT } from '$env/static/private';
 import type { articleT } from '../../../types/blog.js';
 import { Marked } from 'marked';
 import markedShiki from 'marked-shiki';
-import { createHighlighter } from 'shiki';
+import { bundledLanguages, createHighlighter } from 'shiki';
 import type { BundledTheme } from 'shiki/bundle/web';
+
+const isParsable = (lang: string) => Object.keys(bundledLanguages).includes(lang);
 
 const extractLang = (str: string) => {
 	const regex = /```(\w+)\n/g;
@@ -12,7 +14,7 @@ const extractLang = (str: string) => {
 	let match;
 
 	while ((match = regex.exec(str)) !== null) {
-		languages.push(match[1]);
+		if (isParsable(match[1])) languages.push(match[1]);
 	}
 
 	return languages;
@@ -26,6 +28,7 @@ export async function load({ fetch, url, params }) {
 		const raw = (await res.json()) as articleT;
 		const languages = extractLang(raw.data.content);
 		const theme: BundledTheme = 'dark-plus';
+		console.log('loading', languages);
 		const highlighter = await createHighlighter({
 			langs: languages,
 			themes: [theme]
@@ -33,7 +36,8 @@ export async function load({ fetch, url, params }) {
 		const html = await new Marked()
 			.use(
 				markedShiki({
-					highlight(code, lang) {
+					highlight(code, l) {
+						const lang = isParsable(l) ? l : 'text';
 						return highlighter.codeToHtml(code, {
 							lang,
 							theme: theme
